@@ -11,9 +11,9 @@ export class TableWorkersComponent implements OnInit {
   @Input() workers: MyWorker[] = [];
 
   @Output() deleteWorker = new EventEmitter<number>();
-
+ 
   constructor() {}
-
+  searchStr = ''
   ngOnInit(): void {}
 
   onDeleteWorker(id: number) {

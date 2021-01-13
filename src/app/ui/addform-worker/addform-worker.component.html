@@ -32,7 +32,7 @@
       />
     </div>
     <div class="col-4 my-2">
-      <select class="custom-select" [(ngModel)]="type" >
+      <select class="custom-select" [(ngModel)]="type"  [ngModelOptions]="{standalone: true}">
         <option [ngValue]="myWorkerType.programmer">Программист</option>
         <option [ngValue]="myWorkerType.designer">Дизайнер</option>
         <option [ngValue]="myWorkerType.copywriter">Рекламщик</option>

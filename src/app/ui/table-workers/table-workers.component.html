@@ -1,7 +1,13 @@
 <ng-container *ngIf="workers.length > 0">
+ 
   <div class="row">
     <div class="col-12">
       <h5>{{ title }}</h5>
+     
+        <div class="col-12  m-2">
+          <h5 class="form-text">Поиск сотрудника:</h5>
+          <input type="text" class="form-control" [(ngModel)]="searchStr"/>
+        </div>
       <table class="table">
         <thead>
           <tr>
@@ -12,14 +18,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let worker of workers">
+          <tr *ngFor="let worker of workers | myfilter: searchStr">
             <th scope="row">{{ worker.id }}</th>
             <td>{{ worker.name }}</td>
             <td>{{ worker.surname }}</td>
             <td>{{ worker.phone }}</td>
           </tr>
+          
         </tbody>
       </table>
     </div>
-  </div>
+    </div>
 </ng-container>

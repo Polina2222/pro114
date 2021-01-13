@@ -16,6 +16,7 @@ import { __await } from 'tslib';
 })
 export class AppComponent {
   routeApi = 'http://localhost:3000/persons'
+
   title = 'Список сотрудников';
   workers: MyWorker[] = MyWorkersDatabase;
   myWorkerType = MyWorkerType;
